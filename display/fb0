@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+fbset
+fbset -fb /dev/fb0 -g 128 160 128 320 16
+
+dd if=/dev/zero of=/dev/fb0 bs=2 count=20480
+sleep 1
+dd if=/dev/urandom of=/dev/fb0 bs=2 count=20480
+sleep 1
+dd if=/dev/zero bs=320 count=128 | tr "\000" "\377" > /tmp/fbdata
+cat /tmp/fbdata > /dev/fb0
+sleep 1
+dd if=/dev/urandom of=/tmp/fbrandom bs=2 count=20480
+cat /tmp/fbrandom > /dev/fb0
+sleep 1
