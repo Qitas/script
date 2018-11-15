@@ -1,8 +1,8 @@
-﻿# shell
+﻿# [script](https://github.com/mcuyun/script)
 
 ## 简介
 
-linux下面的相关脚本和驱动文件
+linux下面的脚本和驱动模板
 
 
 ---
@@ -13,17 +13,14 @@ linux下面的相关脚本和驱动文件
 
 音频处理相关脚本
 
-#### audio
+#### video
 
 视频处理相关脚本
 
-#### picture
+#### image
 
 图片处理相关脚本
 
-#### gcc
-
-c代码相关的编译问题
 
 ---
 
