@@ -1,6 +1,10 @@
 ﻿# [linux script](https://github.com/qitas/script)
 
-linux下面的脚本和驱动模板
+linux系统下脚本，学习和使用过程都比较简单，虽然比二进制程序执行效率要低一些。
+
+Script是一种批处理文件的延伸，是一种纯文本保存的程序，一般来说的计算机脚本程序是确定的一系列控制计算机进行运算操作动作的组合，在其中可以实现一定的逻辑，通过解释器完成执行过程。
+
+可用于编写脚本的语言有很多，如Scala、JavaScript，PHP，SQL，Perl，Shell，python，Ruby，Lua等。
 
 ## [shell script](https://github.com/qitas/script)
 
