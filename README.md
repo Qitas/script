@@ -45,16 +45,19 @@ python script文件的编写风格同shell ，只是开头的指定解释器变�
 
 后者 #!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。
 
-
 同样，执行文件需要赋予执行权限： chmod +x xxx.py
 
+
+```
+脚本文件可以使用任意文本编辑器，也可以使用任意后缀名，都不影响脚本的执行
+```
 ---
 
 ### [example](https://github.com/qitas/script)
 
 #### [config](config/)
 
-资源获取编译，系统设置等
+获取资源系统设置
 
 * build.sh
 
@@ -62,7 +65,7 @@ python script文件的编写风格同shell ，只是开头的指定解释器变�
 
 #### [image](image/)
 
-图片处理相关脚本文件
+图片处理相关
 
 * all2all
 
