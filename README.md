@@ -6,7 +6,7 @@ Script是一种批处理文件的延伸，是一种纯文本保存的程序，�
 
 可用于编写脚本的语言有很多，如Scala、JavaScript，PHP，SQL，Perl，Shell，python，Ruby，Lua等。
 
-## [shell script](https://github.com/qitas/script)
+## [shell script](shell/)
 
 Shell 是用 C 编写的程序，Shell为用户提供了一个界面，用户界面访问操作系统内核的服务，是使用Linux系统最直接高效的方式，
 
