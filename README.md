@@ -27,12 +27,10 @@ Python是一种解释型语言，开发过程中也没有了编译这个环节�
 查看python版本
 ```
 python --version
-
-#或者进入python环境查看
-
+#或者进入python环境会自动打印相关版本信息
 python 
-
 ```
+
 python 2和3有较大的兼容性问题，所以一般通过python2 和python3区分不同的版本，默认是有相应区分的，没有的化需要自己手动创建相应的链接或者alias。
 
 python script文件的编写风格同shell ，只是开头的指定解释器变为： #!/usr/bin/python（或#!/usr/bin/python2）
@@ -49,7 +47,7 @@ python script文件的编写风格同shell ，只是开头的指定解释器变�
 
 #### [image](image/)
 
-图片处理相关脚本
+图片处理相关脚本文件
 
 
 ## 锻造最美之器
