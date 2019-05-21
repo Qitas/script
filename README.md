@@ -28,6 +28,8 @@ Linux 系统下的 Shell 解释器常见的有：
 
 Python是一种解释型语言，开发过程中也没有了编译这个环节，而且在大多数的Linux发行版本中都带有python运行环境，所以可以直接将相应的代码文件作为脚本使用。
 
+Python是一种动态的、面向对象的脚本语言，最初就是被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越来越多被用于独立的、大型项目的开发。
+
 查看python版本
 ```
 python --version
@@ -37,7 +39,12 @@ python
 
 python 2和3有较大的兼容性问题，所以一般通过python2 和python3区分不同的版本，默认是有相应区分的，没有的化需要自己手动创建相应的链接或者alias。
 
-python script文件的编写风格同shell ，只是开头的指定解释器变为： #!/usr/bin/python（或#!/usr/bin/python2）
+python script文件的编写风格同shell ，只是开头的指定解释器变为：
+* #!/usr/bin/python（或#!/usr/bin/python2）
+* #!/usr/bin/env python3
+
+后者 #!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。
+
 
 同样，执行文件需要赋予执行权限： chmod +x xxx.py
 
@@ -49,11 +56,17 @@ python script文件的编写风格同shell ，只是开头的指定解释器变�
 
 资源获取编译，系统设置等
 
+* build.sh
+
+用于较大型工程的编译，组织各种资源安装配置等，可用于系统开发的相关工程
+
 #### [image](image/)
 
 图片处理相关脚本文件
 
-包括通过python相关的库实现图片处理变换
+* all2all
+
+通过opencv资源完成图片的色彩和编码格式转换。
 
 ## 锻造最美之器
 
