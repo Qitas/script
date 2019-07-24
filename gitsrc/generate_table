@@ -1,0 +1,29 @@
+#! /usr/bin/env python
+
+from __future__ import print_function
+import os
+import sys
+import codecs
+
+def print_usage():
+    print('USAGE: ./generate_table <fp-lib-table path>')
+
+if len(sys.argv) < 2:
+    print_usage()
+    sys.exit(1)
+
+with codecs.open(sys.argv[1], mode='w', encoding='utf8') as f:
+    f.write('(fp_lib_table')
+    for dirname, dirnames, filenames in os.walk(os.path.curdir):
+        # don't go into any .git directories.
+        if '.git' in dirnames:
+            dirnames.remove('.git')
+
+        for filename in filenames:
+            if os.path.splitext(filename)[-1] == '.kicad_mod':
+                name = os.path.relpath(dirname, os.path.curdir).replace('\\', '/')
+                uri = os.path.realpath(dirname).replace('\\', '/')
+                lib = '  (lib (name "{}")(type KiCad) (uri "{}") (options "") (descr ""))\n'.format(name, uri)
+                f.write(lib)
+                break
+    f.write(')')
